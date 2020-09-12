@@ -1,0 +1,249 @@
+/*             planshet           */
+
+@media screen and (min-width: 576px) and (max-width: 991.98px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        font-size: 50px;
+        color: white;
+        padding-top: 40px;
+        padding-left: 100px;
+        margin-bottom: 25px;
+    }
+
+    h5 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    h5 ~ p {
+        font-size: 18px;
+        color: white;
+        margin-bottom: 8px;
+    }
+
+    .margin_planet {
+        margin-bottom: 80px;
+    }
+
+    .image {
+        /*position	: relative;*/
+        max-width: 30vmin;
+    }
+
+    .button_nerqev {
+        max-width: 30px;
+    }
+
+    .title {
+        font-size: 50px;
+        padding-top: 40px;
+        padding-left: 100px;
+        color: white;
+    }
+
+    .fon {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .fon_1 {
+        background-image: url("../images/fon/2.jpg");
+    }
+
+    .fon_2 {
+        background-image: url("../images/fon/fon_01.jpg");
+    }
+
+    .fon_3 {
+        background-image: url("../images/fon/fon_02.jpg");
+    }
+
+    .fon_4 {
+        background-image: url("../images/fon/fon_03.jpg");
+    }
+
+    fon_planet_1 {
+        background-size: 100%;
+        background-image: url("../images/fon/planeta_01.png");
+    }
+
+    fon_planet_2 {
+        background-size: 100%;
+        background-image: url("../images/fon/planeta_01.png");
+    }
+
+    fon_planet_3 {
+        background-size: 100%;
+        background-image: url("../images/fon/planeta_01.png");
+    }
+
+    .block_non_xl {
+        display: none;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .p_white {
+        color: lightgray;
+    }
+
+
+    /*.container {*/
+    /*    max-width: 900px;*/
+    /*    margin: 0 auto;*/
+    /*}*/
+
+    .center {
+        text-align: center;
+    }
+
+    .center_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .more_relative {
+        position: relative;
+    }
+
+    .more {
+        color: white;
+        position: absolute;
+        transform: translateX(-50%);
+        bottom: 30px;
+        font-size: 20px;
+        text-decoration: none;
+        animation: mymove 2s infinite;
+    }
+
+    @keyframes mymove {
+        0%   {color: white;}
+        50% {color: cornflowerblue;}
+        100%   {color: white;}
+    }
+
+    .vh {
+        height: 100vh;
+    }
+
+    .row {
+        margin: 15px -15px;
+    }
+
+    .row1 {
+        margin: 0 +15px;
+    }
+
+    .col {
+        margin: 0 15px;
+        float: left;
+    }
+
+    .col_1_md {
+        width: calc(8.33% - 30px);
+    }
+
+    .col_2_md {
+        width: calc(16.66% - 30px);
+    }
+
+    .col_3_md {
+        width: calc(25% - 30px);
+    }
+
+    .col_4_md {
+        width: calc(33.33% - 30px);
+    }
+
+    .col_5_md {
+        width: calc(41.66% - 30px);
+    }
+
+    .col_6_md {
+        width: calc(50% - 30px);
+    }
+
+    .col_7_md {
+        width: calc(58.33% - 30px);
+    }
+
+    .col_8_md {
+        width: calc(66.66% - 30px);
+    }
+
+    .col_9_md {
+        width: calc(75% - 30px);
+    }
+
+    .col_10_md {
+        width: calc(83.33% - 30px);
+    }
+
+    .col_11_md {
+        width: calc(91.66% - 30px);
+    }
+
+    .col_12_md {
+        width: calc(100% - 30px);
+    }
+
+    .col_offset_1 {
+        margin-left: calc(8.33% + 15px);
+    }
+
+    .col_offset_2 {
+        margin-left: calc(16.66% + 15px);
+    }
+
+    .col_offset_3 {
+        margin-left: calc(25% + 15px);
+    }
+
+    .col_offset_4 {
+        margin-left: calc(33.33% + 15px);
+    }
+
+    .col_offset_5 {
+        margin-left: calc(41.66% + 15px);
+    }
+
+    .col_offset_6 {
+        margin-left: calc(50% + 15px);
+    }
+
+    .col_offset_7 {
+        margin-left: calc(58.33% + 15px);
+    }
+
+    .col_offset_8 {
+        margin-left: calc(66.66% + 15px);
+    }
+
+    .col_offset_9 {
+        margin-left: calc(75% + 15px);
+    }
+
+    .col_offset_10 {
+        margin-left: calc(83.33% + 15px);
+    }
+
+    .col_offset_11 {
+        margin-left: calc(91.66% + 15px);
+    }
+
+    .col_offset_12 {
+        margin-left: calc(100% + 15px);
+    }
+
+}
