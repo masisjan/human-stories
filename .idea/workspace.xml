@@ -2,48 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21439253-a547-4a6d-b05d-878c76d8561f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scopes/FilterScope.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/scopes/SearchScope.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/posts/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/users/_filter.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/users/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/users/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/users/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/users/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/users/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/people/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/human-stories.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/human-stories.loc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cityfriend.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Citypost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/City.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Friend.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Friend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Video.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_12_054707_create_cityfriends_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_12_054748_create_cityposts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122447_create_cities_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_12_054822_create_friends_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122747_create_friends_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_12_055027_create_musics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122900_create_music_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_12_055122_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122936_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_12_055250_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_123024_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/_filter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/_filter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +228,7 @@
       <workItem from="1600626038599" duration="5773000" />
       <workItem from="1600667736165" duration="4587000" />
       <workItem from="1600701407677" duration="5777000" />
-      <workItem from="1600712910790" duration="427000" />
+      <workItem from="1600712910790" duration="2731000" />
     </task>
     <servers />
   </component>

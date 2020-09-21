@@ -62,7 +62,7 @@
                                 </tbody>
                             </table>
 
-{{--                            {{ $posts_users->links() }}--}}
+                            {{ $posts->links() }}
                         </div>
                     </div>
                 </div>

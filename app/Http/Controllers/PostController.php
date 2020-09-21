@@ -30,7 +30,7 @@ class PostController extends Controller
 
         $user_id = auth()->user()->id;
 //        dd($user_id);
-        $posts_users = Post::orderBy('name')->where('admin_id', $user_id)->get();
+        $posts_users = Post::orderBy('name')->where('admin_id', $user_id)->paginate(5);
 //        dd($posts);
 //        dd($posts_users);
 
