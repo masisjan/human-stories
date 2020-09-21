@@ -34,10 +34,10 @@ class CreatePostsTable extends Migration
             $table->string('publish')->default('not');
             $table->timestamps();
 
-            $table->foreign('admin_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('admin_id')->references('id')->on('users');
             $table->foreign('friend_id')->references('id')->on('friends');
-            $table->foreign('music_fon_id')->references('id')->on('musics')->onDelete('cascade');
-            $table->foreign('city_id')->references('id')->on('cityposts')->onDelete('cascade');
+            $table->foreign('music_fon_id')->references('id')->on('music')->onDelete('cascade');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         });
     }
 

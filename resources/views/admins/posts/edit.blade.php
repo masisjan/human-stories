@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('title', 'Contact App | Update contact')
 
@@ -12,10 +12,10 @@
                             <strong>Update contact</strong>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('contacts.update', $contact->id) }}" method="POST">
+                            <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                                 @method('PUT')
                                 @csrf
-                                @include('contacts._form')
+                                @include('admins.posts._form')
                             </form>
                         </div>
                     </div>

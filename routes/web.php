@@ -17,15 +17,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/{id}', "PostController@index")->name('posts.index');
+Route::group( ["middleware" => ["auth", "verified"]], function() {
+    Route::prefix('admins')->group(function () {
 
-Route::get('/admins/posts', "PostController@index")->name('posts.index');
-Route::post('/admins', "PostController@store")->name('posts.store');
-Route::get('/admins/create', "PostController@create")->name('posts.create');
-Route::get('/admins/{id}', "PostctController@show")->name('posts.show');
-Route::delete('/admins/{id}', "PostController@destroy")->name('posts.destroy');
-Route::put('/admins/{id}', "PostController@update")->name('posts.update');
-Route::get('/admins/{id}/edit', "PostController@edit")->name('posts.edit');
+    Route::get('/posts', "PostController@index")->name('posts.index');
+    Route::post('/posts', "PostController@store")->name('posts.store');
+    Route::get('/posts/create', "PostController@create")->name('posts.create');
+    Route::get('/posts/{id}', "PostController@show")->name('posts.show');
+    Route::delete('/posts/{id}', "PostController@destroy")->name('posts.destroy');
+    Route::put('/posts/{id}', "PostController@update")->name('posts.update');
+    Route::get('/posts/{id}/edit', "PostController@edit")->name('posts.edit');
+
+            Route::get('/users', "AdminController@index")->name('users.index');
+            Route::post('/users', "AdminController@store")->name('users.store');
+            Route::get('/users/create', "AdminController@create")->name('users.create');
+            Route::get('/users/{id}', "AdminController@show")->name('users.show');
+            Route::delete('/users/{id}', "AdminController@destroy")->name('users.destroy');
+            Route::put('/users/{id}', "AdminController@update")->name('users.update');
+            Route::get('/users/{id}/edit', "AdminController@edit")->name('users.edit');
+    });
+});
+
+Route::get('/people/{id}', "PostController@people")->name('people.show');
 
 Auth::routes();
 

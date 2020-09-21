@@ -4,9 +4,9 @@
         <form>
             <div class="row">
                 <div class="col">
-                    <select id="filter_company_id" name="company_id" class="custom-select">
-                        @foreach($companies as $id => $name)
-                            <option {{ $id == request('company_id') ? 'selected' : '' }} value="{{ $id }}">{{ $name }}</option>
+                    <select id="filter_city_id" name="city_id" class="custom-select">
+                        @foreach($cities as $id => $index)
+                            <option {{ $id == request('city_id') ? 'selected' : '' }} value="{{ $id }}">{{ $index }}</option>
                         @endforeach
                     </select>
                 </div>
