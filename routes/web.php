@@ -28,6 +28,8 @@ Route::group( ["middleware" => ["auth", "verified"]], function() {
     Route::put('/posts/{id}', "PostController@update")->name('posts.update');
     Route::get('/posts/{id}/edit', "PostController@edit")->name('posts.edit');
 
+        Route::group( ["middleware" => ["admin", "auth", "verified"]], function() {
+
             Route::get('/users', "AdminController@index")->name('users.index');
             Route::post('/users', "AdminController@store")->name('users.store');
             Route::get('/users/create', "AdminController@create")->name('users.create');
@@ -35,6 +37,7 @@ Route::group( ["middleware" => ["auth", "verified"]], function() {
             Route::delete('/users/{id}', "AdminController@destroy")->name('users.destroy');
             Route::put('/users/{id}', "AdminController@update")->name('users.update');
             Route::get('/users/{id}/edit', "AdminController@edit")->name('users.edit');
+        });
     });
 });
 
