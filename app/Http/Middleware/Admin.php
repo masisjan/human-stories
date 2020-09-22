@@ -15,7 +15,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->user()->type = 'user') {
+        if (auth()->user()->type == 'user') {
             return redirect('home');
         }
         return $next($request);
