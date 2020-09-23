@@ -20,11 +20,41 @@ class AdminController extends Controller
     {
         //        dd(request()->only('company_id'));
         DB::enableQueryLog();
-//        $companies = Company::orderBy('name')->pluck('name', 'id')->prepend('All Companies', '');
         $users = User::latest()->paginate(1);
 //        $user_id = auth()->user()->id;
 //        $posts_user = Post::where('admin_id', $user_id);
 //        $posts = Post::orderBy('name')->pluck('name', 'id');
         return view('admins.users.index', compact('users'));
+    }
+
+    public function show($id)
+    {
+        $user = User::findOrFail($id);
+        return view('admins.users.show', compact('user')); // ['contact' => $contact]
+    }
+
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+        return view('admins.users.edit', compact('user'));
+
+    }
+
+    public function update($id, Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->update($request->all());
+        return redirect()->route('users.index')->with('message', "Contact has been updated successfully");
+    }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id)->delete();
+
+        return redirect()->route('users.index')->with('message', "Contact has been deleted successfully");
     }
 }

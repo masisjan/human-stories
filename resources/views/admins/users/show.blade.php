@@ -7,140 +7,45 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header card-title">
-                            <strong>Post Details</strong>
+                            <strong>Users Details</strong>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    @if(auth()->user()->type == 'admin')
                                     <div class="form-group row">
-                                        <label for="admin_id" class="col-md-3 col-form-label">Admin</label>
+                                        <label for="type" class="col-md-3 col-form-label">User type</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->admin_id }}</p>
-                                        </div>
-                                    </div>
-                                    @endif
-
-                                    <div class="form-group row">
-                                        <label for="friend_id" class="col-md-3 col-form-label">Friend</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->friend->name }}</p>
+                                            <p class="form-control-plaintext text-muted">{{ $user->type }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="city_id" class="col-md-3 col-form-label">City</label>
+                                        <label for="name" class="col-md-3 col-form-label">User name</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->city_id }}</p>
+                                            <p class="form-control-plaintext text-muted">{{ $user->name }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="type_comment" class="col-md-3 col-form-label">Type comment</label>
+                                        <label for="email" class="col-md-3 col-form-label">User email</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->type_comment }}</p>
+                                            <p class="form-control-plaintext text-muted">{{ $user->email }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="music_fon_id" class="col-md-3 col-form-label">Music fon</label>
+                                        <label for="created_at" class="col-md-3 col-form-label">User created</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->music_fon_id }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="video" class="col-md-3 col-form-label">Video</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->video }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="image" class="col-md-3 col-form-label">Image</label>
-                                        <div class="col-md-9">
-                                            <img src="{{ asset('storage/uploads/image/' . $post->image) }}" style="width:100px" alt=""><br>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="name" class="col-md-3 col-form-label">Name</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->name }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="date" class="col-md-3 col-form-label">Date</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->date }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="position" class="col-md-3 col-form-label">Position</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->position }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="biography" class="col-md-3 col-form-label">Biography</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->biography }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="other" class="col-md-3 col-form-label">Other</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->other }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="speech" class="col-md-3 col-form-label">Speech</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->speech }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="images" class="col-md-3 col-form-label">Images</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->images }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="family" class="col-md-3 col-form-label">Family</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->family }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="gender" class="col-md-3 col-form-label">Gender</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->gender }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="publish" class="col-md-3 col-form-label">Publish</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->publish }}</p>
+                                            <p class="form-control-plaintext text-muted">{{ $user->created_at }}</p>
                                         </div>
                                     </div>
 
                                     <hr>
                                     <div class="form-group row mb-0">
                                         <div class="col-md-9 offset-md-3">
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info">Edit</a>
-                                            @if(auth()->user()->type == 'admin')
-                                            <a href="{{ route('posts.destroy', [$post->id]) }}" class="btn btn-outline-danger">Delete</a>
-                                            @endif
-                                            <a href="{{ route('posts.index') }}" class="btn btn-delete btn-outline-secondary" >Cancel</a>
+                                            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">Edit</a>
+                                            <a href="{{ route('users.destroy', [$user->id]) }}" class="btn btn-outline-danger">Delete</a>
+                                            <a href="{{ route('users.index') }}" class="btn btn-delete btn-outline-secondary" >Cancel</a>
                                         </div>
                                     </div>
                                 </div>

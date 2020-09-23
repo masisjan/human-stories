@@ -9,6 +9,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
+
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
+
     use Notifiable;
 
     /**
@@ -19,11 +25,6 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password',
     ];
-
-    public function post()
-    {
-        return $this->belongsTo(Post::class);
-    }
 
     /**
      * The attributes that should be hidden for arrays.

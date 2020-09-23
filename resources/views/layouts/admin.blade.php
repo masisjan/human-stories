@@ -33,7 +33,7 @@
                 <li class="nav-item active"><a href=" {{ route('users.index') }} " class="nav-link">Users</a></li>
                 @endif
                 <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Posts</a></li>
-                <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Friends</a></li>
+                <li class="nav-item active"><a href=" {{ route('friends.index') }} " class="nav-link">Friends</a></li>
                 <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Cities</a></li>
                 <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Music</a></li>
                 <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Singers</a></li>

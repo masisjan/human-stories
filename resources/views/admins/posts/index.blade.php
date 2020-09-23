@@ -24,26 +24,22 @@
                                     <th scope="col">Name id</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Date</th>
-                                    <th scope="col">City</th>
+                                    <th scope="col">Admin</th>
                                     <th scope="col">Friend</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-{{--                                {{ dd($posts_users)}}--}}
                                 @if(auth()->user()->type == 'user' ? $posts = $posts_users : true)
-{{--                                    {{ dd($posts)}}--}}
-{{--                                {{ $posts = $posts_users }}--}}
-{{--                                {{ dd($posts)}}--}}
                                 @endif
                                 @if($posts->count())
                                     @foreach($posts as $index => $post)
                                         <tr>
                                             <th scope="row"> {{ $index + 1 }} </th>
-{{--                                            <th scope="row"> {{ $index + $posts->firstItem() }} </th>--}}
+                                            <th scope="row"> {{ $index + $posts->firstItem() }} </th>
                                             <td> {{ $post->name }} </td>
                                             <td> {{ $post->date }} </td>
-                                            <td> {{ $post->admin_id }} </td>
+                                            <td> {{ auth()->user()->name }} </td>
                                             <td> {{ $post->friend->name }} </td>
                                             <td width="150">
                                                 <a href="{{ route('posts.show' , [$post->id]) }}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>

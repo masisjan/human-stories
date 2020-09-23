@@ -12,4 +12,9 @@ class Friend extends Model
     {
         return $this->belongsTo(Post::class);
     }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
 }

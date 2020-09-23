@@ -28,11 +28,19 @@ Route::group( ["middleware" => ["auth", "verified"]], function() {
     Route::put('/posts/{id}', "PostController@update")->name('posts.update');
     Route::get('/posts/{id}/edit', "PostController@edit")->name('posts.edit');
 
+    Route::get('/friends', "FriendController@index")->name('friends.index');
+    Route::post('/friends', "FriendController@store")->name('friends.store');
+    Route::get('/friends/create', "FriendController@create")->name('friends.create');
+    Route::get('/friends/{id}', "FriendController@show")->name('friends.show');
+    Route::delete('/friends/{id}', "FriendController@destroy")->name('friends.destroy');
+    Route::put('/friends/{id}', "FriendController@update")->name('friends.update');
+    Route::get('/friends/{id}/edit', "FriendController@edit")->name('friends.edit');
+
         Route::group( ["middleware" => ["admin", "auth", "verified"]], function() {
 
             Route::get('/users', "AdminController@index")->name('users.index');
             Route::post('/users', "AdminController@store")->name('users.store');
-            Route::get('/users/create', "AdminController@create")->name('users.create');
+//            Route::get('/users/create', "AdminController@create")->name('users.create');
             Route::get('/users/{id}', "AdminController@show")->name('users.show');
             Route::delete('/users/{id}', "AdminController@destroy")->name('users.destroy');
             Route::put('/users/{id}', "AdminController@update")->name('users.update');

@@ -16,7 +16,7 @@
                                     <div class="form-group row">
                                         <label for="admin_id" class="col-md-3 col-form-label">Admin</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->admin_id }}</p>
+                                            <p class="form-control-plaintext text-muted">{{ auth()->user()->name }}</p>
                                         </div>
                                     </div>
                                     @endif
@@ -31,7 +31,7 @@
                                     <div class="form-group row">
                                         <label for="city_id" class="col-md-3 col-form-label">City</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->city_id }}</p>
+                                            <p class="form-control-plaintext text-muted">{{ $post->city->name}}</p>
                                         </div>
                                     </div>
 
@@ -45,7 +45,7 @@
                                     <div class="form-group row">
                                         <label for="music_fon_id" class="col-md-3 col-form-label">Music fon</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->music_fon_id }}</p>
+                                            <p class="form-control-plaintext text-muted">{{ $post->music_fon_id}}</p>
                                         </div>
                                     </div>
 

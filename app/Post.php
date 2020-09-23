@@ -37,4 +37,9 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function City()
+    {
+        return $this->belongsTo(City::class);
+    }
+
 }
