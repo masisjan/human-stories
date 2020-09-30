@@ -12,11 +12,11 @@ class City extends Model
 
     public function post()
     {
-        return $this->hasMany(Post::class);
+        return $this->belongsTo(Post::class);
     }
 
     public function friend()
     {
-        return $this->hasMany(Friend::class);
+        return $this->belongsTo(Friend::class);
     }
 }

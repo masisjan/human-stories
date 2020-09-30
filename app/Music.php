@@ -12,4 +12,9 @@ class Music extends Model
     {
         return $this->belongsTo(Post::class);
     }
+
+    public function singer()
+    {
+        return $this->belongsTo(Singer::class);
+    }
 }

@@ -55,6 +55,7 @@ class FriendController extends Controller
 //        dd($request->all());
 
     }
+
     public function update($id, Request $request)
     {
         $request->validate([

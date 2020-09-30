@@ -15,12 +15,12 @@ class CreateMusicTable extends Migration
     {
         Schema::create('music', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('singer_id');
+            $table->unsignedBigInteger('singer_id')->nullable();
             $table->string('name');
             $table->string('path');
             $table->timestamps();
 
-            $table->foreign('singer_id')->references('id')->on('singers')->onDelete('cascade');
+            $table->foreign('singer_id')->references('id')->on('singers')->onDelete('set null');
         });
     }
 

@@ -2,24 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21439253-a547-4a6d-b05d-878c76d8561f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/friends/_filter.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/friends/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/friends/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/friends/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/friends/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/_filter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/_filter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Friend.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Friend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/City.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FriendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/users/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/users/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/friends/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/users/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Music.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Music.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_122747_create_friends_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122747_create_friends_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_122900_create_music_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122900_create_music_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_122936_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122936_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_123024_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_123024_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/friends/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/friends/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -179,16 +184,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\people" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\public\images" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\public\css" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\posts" />
       <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\Cities" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\people" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\public\images" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -248,7 +253,16 @@
       <workItem from="1600712910790" duration="2968000" />
       <workItem from="1600776442559" duration="6242000" />
       <workItem from="1600796228890" duration="8044000" />
-      <workItem from="1600834329625" duration="1221000" />
+      <workItem from="1600834329625" duration="3883000" />
+      <workItem from="1600885599260" duration="46000" />
+      <workItem from="1600886785564" duration="2615000" />
+      <workItem from="1601061769183" duration="3010000" />
+      <workItem from="1601098700738" duration="327000" />
+      <workItem from="1601120964116" duration="6405000" />
+      <workItem from="1601209704747" duration="8531000" />
+      <workItem from="1601406712140" duration="640000" />
+      <workItem from="1601409596533" duration="3666000" />
+      <workItem from="1601441165661" duration="1246000" />
     </task>
     <servers />
   </component>
@@ -259,18 +273,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="741" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600196130799">
+    <state x="741" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601230739499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="741" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600196130799" />
+    <state x="741" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1601230739499" />
     <state x="662" y="117" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600010505452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="117" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600010505452" />
-    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600796860273">
+    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601215475814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600796860273" />
+    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601215475814" />
     <state x="354" y="85" key="DiffContextDialog" timestamp="1600578043851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -36,6 +36,22 @@ Route::group( ["middleware" => ["auth", "verified"]], function() {
     Route::put('/friends/{id}', "FriendController@update")->name('friends.update');
     Route::get('/friends/{id}/edit', "FriendController@edit")->name('friends.edit');
 
+    Route::get('/cities', "CityController@index")->name('cities.index');
+    Route::post('/cities', "CityController@store")->name('cities.store');
+    Route::get('/cities/create', "CityController@create")->name('cities.create');
+    Route::get('/cities/{id}', "CityController@show")->name('cities.show');
+    Route::delete('/cities/{id}', "CityController@destroy")->name('cities.destroy');
+    Route::put('/cities/{id}', "CityController@update")->name('cities.update');
+    Route::get('/cities/{id}/edit', "CityController@edit")->name('cities.edit');
+
+    Route::get('/music', "MusicController@index")->name('music.index');
+    Route::post('/music', "MusicController@store")->name('music.store');
+    Route::get('/music/create', "MusicController@create")->name('music.create');
+    Route::get('/music/{id}', "MusicController@show")->name('music.show');
+    Route::delete('/music/{id}', "MusicController@destroy")->name('music.destroy');
+    Route::put('/music/{id}', "MusicController@update")->name('music.update');
+    Route::get('/music/{id}/edit', "MusicController@edit")->name('music.edit');
+
         Route::group( ["middleware" => ["admin", "auth", "verified"]], function() {
 
             Route::get('/users', "AdminController@index")->name('users.index');

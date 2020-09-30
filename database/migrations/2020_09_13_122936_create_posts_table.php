@@ -14,10 +14,10 @@ class CreatePostsTable extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('admin_id');
-            $table->unsignedBigInteger('friend_id');
-            $table->unsignedBigInteger('city_id');
+            $table->id()->nullable();
+            $table->unsignedBigInteger('admin_id')->nullable();
+            $table->unsignedBigInteger('friend_id')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
             $table->string('type_comment')->default('not');
             $table->unsignedBigInteger('music_fon_id')->nullable();
             $table->unsignedBigInteger('video')->nullable();
@@ -34,10 +34,10 @@ class CreatePostsTable extends Migration
             $table->string('publish')->default('not');
             $table->timestamps();
 
-            $table->foreign('admin_id')->references('id')->on('users');
-            $table->foreign('friend_id')->references('id')->on('friends');
-            $table->foreign('music_fon_id')->references('id')->on('music')->onDelete('cascade');
-            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
+            $table->foreign('admin_id')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('friend_id')->references('id')->on('friends')->onDelete('set null');
+            $table->foreign('music_fon_id')->references('id')->on('music')->onDelete('set null');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('set null');
         });
     }
 
