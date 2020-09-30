@@ -52,6 +52,14 @@ Route::group( ["middleware" => ["auth", "verified"]], function() {
     Route::put('/music/{id}', "MusicController@update")->name('music.update');
     Route::get('/music/{id}/edit', "MusicController@edit")->name('music.edit');
 
+    Route::get('/singers', "SingerController@index")->name('singers.index');
+    Route::post('/singers', "SingerController@store")->name('singers.store');
+    Route::get('/singers/create', "SingerController@create")->name('singers.create');
+    Route::get('/singers/{id}', "SingerController@show")->name('singers.show');
+    Route::delete('/singers/{id}', "SingerController@destroy")->name('singers.destroy');
+    Route::put('/singers/{id}', "SingerController@update")->name('singers.update');
+    Route::get('/singers/{id}/edit', "SingerController@edit")->name('singers.edit');
+
         Route::group( ["middleware" => ["admin", "auth", "verified"]], function() {
 
             Route::get('/users', "AdminController@index")->name('users.index');

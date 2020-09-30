@@ -82,7 +82,6 @@ class FriendController extends Controller
     public function destroy($id)
     {
         $Friend = Friend::findOrFail($id)->delete();
-
         return redirect()->route('friends.index')->with('message', "Contact has been deleted successfully");
     }
 }

@@ -36,7 +36,7 @@
                 <li class="nav-item active"><a href=" {{ route('friends.index') }} " class="nav-link">Friends</a></li>
                 <li class="nav-item active"><a href=" {{ route('cities.index') }} " class="nav-link">Cities</a></li>
                 <li class="nav-item active"><a href=" {{ route('music.index') }} " class="nav-link">Music</a></li>
-                <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Singers</a></li>
+                <li class="nav-item active"><a href=" {{ route('singers.index') }} " class="nav-link">Singers</a></li>
                 <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Comments</a></li>
             </ul>
             <ul class="navbar-nav ml-auto">

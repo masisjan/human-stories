@@ -140,7 +140,6 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id)->delete();
-
         return redirect()->route('posts.index')->with('message', "Contact has been deleted successfully");
     }
 }

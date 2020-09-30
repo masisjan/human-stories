@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21439253-a547-4a6d-b05d-878c76d8561f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/_filter.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/Cities/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/_filter.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/_form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/City.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/City.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FriendController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Music.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Music.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_122747_create_friends_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122747_create_friends_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_122900_create_music_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122900_create_music_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_122936_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_122936_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_123024_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_123024_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/friends/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/friends/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SingerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SingerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/singers/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/singers/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/singers/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/singers/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/singers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/singers/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/singers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/singers/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/singers/show.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -184,16 +170,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\posts" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
       <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\Cities" />
       <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\people" />
       <recent name="C:\xampp\htdocs\human-stories.loc\public\images" />
       <recent name="C:\xampp\htdocs\human-stories.loc\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\posts" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
     </key>
   </component>
   <component name="RunManager">
@@ -262,7 +248,9 @@
       <workItem from="1601209704747" duration="8531000" />
       <workItem from="1601406712140" duration="640000" />
       <workItem from="1601409596533" duration="3666000" />
-      <workItem from="1601441165661" duration="1246000" />
+      <workItem from="1601441165661" duration="2062000" />
+      <workItem from="1601481677231" duration="2800000" />
+      <workItem from="1601487512286" duration="1365000" />
     </task>
     <servers />
   </component>

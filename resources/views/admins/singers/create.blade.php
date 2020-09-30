@@ -8,12 +8,12 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header card-title">
-                            <strong>Add New Friend</strong>
+                            <strong>Add New Singer</strong>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('friends.store') }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('singers.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @include('admins.friends._form')
+                                @include('admins.singers._form')
                             </form>
                         </div>
                     </div>

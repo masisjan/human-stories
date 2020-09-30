@@ -9,13 +9,13 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header card-title">
-                            <strong>Update Friend</strong>
+                            <strong>Update Singer</strong>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('friends.update', $friend->id) }}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('singers.update', $singer->id) }}" method="POST" enctype="multipart/form-data">
                                 @method('PUT')
                                 @csrf
-                                @include('admins.friends._form')
+                                @include('admins.singers._form')
                             </form>
                         </div>
                     </div>
