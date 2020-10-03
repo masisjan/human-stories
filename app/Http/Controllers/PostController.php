@@ -72,7 +72,6 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-
         $request->validate([
             'name' => 'required',
             'date' => 'required',
@@ -80,10 +79,10 @@ class PostController extends Controller
 //            'company_id' => 'required|exists:companies,id'
         ]);
 
-
+        $img_name = $request->friend_id;
         $admin_id = auth()->user()->id;
         $image_new_name = date('Y-m-d-H-i-s') . '.' . $request->file('image')->getClientOriginalExtension();
-        $image_path = $request->file('image')->storeAs('uploads/image', $image_new_name, 'public');
+        $image_path = $request->file('image')->storeAs('uploads/image/' . $img_name, $image_new_name, 'public');
 
         $form_data = array(
             'admin_id'               =>  $admin_id,

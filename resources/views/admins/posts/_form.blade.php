@@ -96,7 +96,7 @@
             <label for="image" class="col-md-3 col-form-label">Image</label>
             <div class="col-md-9">
                 @if($post->image)
-                    <img src="{{ asset('storage/uploads/image/' . $post->image) }}" style="width:100px" alt=""><br>
+                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:100px" alt=""><br>
                     <input type="hidden" name="image" value="{{ $post->image }}" id="image" class=" @error('image') is-invalid @enderror">
                 @else
                     <input type="file" name="image" value="{{ old('image', $post->image) }}" id="image" class=" @error('image') is-invalid @enderror">
@@ -182,12 +182,15 @@
         <div class="form-group row">
             <label for="images" class="col-md-3 col-form-label">Images</label>
             <div class="col-md-9">
-                <input type="text" name="images" value="{{ old('images', $post->images) }}" id="images" class="form-control @error('images') is-invalid @enderror">
-                @error('images')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-                @enderror
+                @if($post->images)
+                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->images) }}" style="width:100px" alt=""><br>
+                    <input type="hidden" name="images" value="{{ $post->images }}" id="images" class=" @error('images') is-invalid @enderror">
+                @else
+                    <input type="file" name="images" value="{{ old('images', $post->images) }}" id="images" class=" @error('images') is-invalid @enderror">
+                    @error('images')
+                    <br><div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                @endif
             </div>
         </div>
 
