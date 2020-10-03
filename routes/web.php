@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', "PostController@home");
+Route::get('/people/{id}', "PostController@people")->name('people.show');
 
 Route::group( ["middleware" => ["auth", "verified"]], function() {
     Route::prefix('admins')->group(function () {
@@ -60,6 +62,14 @@ Route::group( ["middleware" => ["auth", "verified"]], function() {
     Route::put('/singers/{id}', "SingerController@update")->name('singers.update');
     Route::get('/singers/{id}/edit', "SingerController@edit")->name('singers.edit');
 
+    Route::get('/comments', "CommentController@index")->name('comments.index');
+    Route::post('/comments', "CommentController@store")->name('comments.store');
+    Route::get('/comments/create', "CommentController@create")->name('comments.create');
+    Route::get('/comments/{id}', "CommentController@show")->name('comments.show');
+    Route::delete('/comments/{id}', "CommentController@destroy")->name('comments.destroy');
+    Route::put('/comments/{id}', "CommentController@update")->name('comments.update');
+    Route::get('/comments/{id}/edit', "CommentController@edit")->name('comments.edit');
+
         Route::group( ["middleware" => ["admin", "auth", "verified"]], function() {
 
             Route::get('/users', "AdminController@index")->name('users.index');
@@ -72,8 +82,6 @@ Route::group( ["middleware" => ["auth", "verified"]], function() {
         });
     });
 });
-
-Route::get('/people/{id}', "PostController@people")->name('people.show');
 
 Auth::routes();
 

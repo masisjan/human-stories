@@ -31,6 +31,14 @@
         max-width		: 100%;
     }
 
+    .php {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+        font-size: 70px;
+    }
+
     .button_nerqev {
         max-width: 30px;
     }

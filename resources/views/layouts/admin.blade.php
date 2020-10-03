@@ -14,6 +14,7 @@
     <link href=" {{ asset('css/style_md.css') }} " rel="stylesheet">
     <link href=" {{ asset('css/style_sm.css') }} " rel="stylesheet">
     <link href=" {{ asset('css/style_xl.css') }} " rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 </head>
 <body>
 <!-- navbar -->
@@ -37,7 +38,7 @@
                 <li class="nav-item active"><a href=" {{ route('cities.index') }} " class="nav-link">Cities</a></li>
                 <li class="nav-item active"><a href=" {{ route('music.index') }} " class="nav-link">Music</a></li>
                 <li class="nav-item active"><a href=" {{ route('singers.index') }} " class="nav-link">Singers</a></li>
-                <li class="nav-item active"><a href=" {{ route('posts.index') }} " class="nav-link">Comments</a></li>
+                <li class="nav-item active"><a href=" {{ route('comments.index') }} " class="nav-link">Comments</a></li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 @guest

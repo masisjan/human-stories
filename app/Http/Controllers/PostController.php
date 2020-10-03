@@ -132,9 +132,19 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $users = User::orderBy('name')->pluck('name', 'id');
         $friends = Friend::orderBy('name')->pluck('name', 'id');
-        $cities = City::orderBy('name')->pluck('name', 'id')->prepend('All Cities', '');
+        $cities = City::orderBy('name')->pluck('name', 'id');
         $music = Music::orderBy('name')->pluck('name', 'id');
         return view('people.show', compact('post', 'users', 'friends', 'cities', 'music')); // ['contact' => $contact]
+    }
+
+    public function home()
+    {
+        $posts = Post::orderBy('name')->pluck('name', 'id');
+        $users = User::orderBy('name')->pluck('name', 'id');
+        $friends = Friend::orderBy('name')->pluck('name', 'id');
+        $cities = City::orderBy('name')->pluck('name', 'id');
+        $music = Music::orderBy('name')->pluck('name', 'id');
+        return view('welcome', compact('posts', 'users', 'friends', 'cities', 'music')); // ['contact' => $contact]
     }
 
     public function destroy($id)

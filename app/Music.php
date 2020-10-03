@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Scopes\FilterScope;
+use App\Scopes\SearchScope;
 
 class Music extends Model
 {

@@ -36,8 +36,16 @@
     }
 
     .image {
-        /*position	: relative;*/
+        position	: relative;
         max-width: 30vmin;
+    }
+
+    .php {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        font-size: 50px;
     }
 
     .button_nerqev {
