@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/people/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/people/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +245,12 @@
       <workItem from="1601487512286" duration="6018000" />
       <workItem from="1601571275251" duration="4685000" />
       <workItem from="1601657184046" duration="8108000" />
-      <workItem from="1601701579115" duration="3437000" />
+      <workItem from="1601701579115" duration="3800000" />
+      <workItem from="1601736267144" duration="4435000" />
+      <workItem from="1601744337839" duration="4387000" />
+      <workItem from="1601792498016" duration="3017000" />
+      <workItem from="1601801596357" duration="2033000" />
+      <workItem from="1601820722742" duration="597000" />
     </task>
     <servers />
   </component>

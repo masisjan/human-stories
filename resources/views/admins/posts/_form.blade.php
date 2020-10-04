@@ -184,7 +184,7 @@
             <div class="col-md-9">
                 @if($post->images)
                     <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->images) }}" style="width:100px" alt=""><br>
-                    <input type="hidden" name="images" value="{{ $post->images }}" id="images" class=" @error('images') is-invalid @enderror">
+                    <input type="hidden" name="images[]" value="{{ $post->images }}" id="images" class=" @error('images') is-invalid @enderror">
                 @else
                     <input type="file" name="images" value="{{ old('images', $post->images) }}" id="images" class=" @error('images') is-invalid @enderror">
                     @error('images')
