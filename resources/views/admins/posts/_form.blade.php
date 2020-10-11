@@ -237,6 +237,21 @@
             </div>
         </div>
 
+        <div class="form-group row">
+            <label for="qr" class="col-md-3 col-form-label">Qr</label>
+            <div class="col-md-9">
+                <select name="qr" class="custom-select @error('qr') is-invalid @enderror">
+                    <option value="not">not</option>
+                    <option value="yes">yes</option>
+                </select>
+                @error('qr')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
+        </div>
+
         <hr>
         <div class="form-group row mb-0">
             <div class="col-md-9 offset-md-3">

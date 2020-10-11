@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('city_id')->nullable();
             $table->string('type_comment')->default('not');
             $table->unsignedBigInteger('music_fon_id')->nullable();
-            $table->unsignedBigInteger('video')->nullable();
+            $table->string('video')->nullable();
             $table->string('image')->nullable();
             $table->string('name');
             $table->string('date');
@@ -32,6 +32,7 @@ class CreatePostsTable extends Migration
             $table->text('family')->nullable();
             $table->string('gender');
             $table->string('publish')->default('not');
+            $table->string('qr')->default('not');
             $table->timestamps();
 
             $table->foreign('admin_id')->references('id')->on('users')->onDelete('set null');
