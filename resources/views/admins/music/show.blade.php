@@ -34,7 +34,6 @@
                                                 <source src="{{ asset('storage/uploads/music/' . $music->path) }}" type="audio/ogg; codecs=vorbis">
                                                 <source src="{{ asset('storage/uploads/music/' . $music->path) }}" type="audio/mpeg">
                                             </audio>
-{{--                                            <img src="{{ asset('storage/uploads/image/' . $music->path) }}" style="width:100px" ><br>--}}
                                         </div>
                                     </div>
 
@@ -43,9 +42,9 @@
                                         <div class="col-md-9 offset-md-3">
                                             <a href="{{ route('music.edit', $music->id) }}" class="btn btn-info">Edit</a>
                                             @if(auth()->user()->type == 'admin')
-                                            <a href="{{ route('music.destroy', [$music->id]) }}" class="btn btn-outline-danger">Delete</a>
+                                            <a href="{{ route('music.destroy', [$music->id]) }}" class="btn btn-delete btn-outline-danger">Delete</a>
                                             @endif
-                                            <a href="{{ route('music.index') }}" class="btn btn-delete btn-outline-secondary" >Cancel</a>
+                                            <a href="{{ route('music.index') }}" class="btn btn-outline-secondary" >Cancel</a>
                                         </div>
                                     </div>
                                 </div>

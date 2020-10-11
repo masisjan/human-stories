@@ -113,12 +113,12 @@
                 </button>
             </p>
         </form>
-{{--        <audio controls autoplay>--}}
-{{--            <source src="{{ asset('storage/uploads/music/' . $post->musices->path) }}" type="audio/ogg; codecs=vorbis">--}}
-{{--            <source src="{{ asset('storage/uploads/music/' . $post->music->path) }}" type="audio/mpeg">--}}
-{{--        </audio>--}}
         <!-- End Contact Section -->
     </div>
+        <audio controls autoplay>
+            <source src="{{ asset('storage/uploads/music/' . $post->music->path) }}" type="audio/ogg">
+            <source src="{{ asset('storage/uploads/music/' . $post->music->path) }}" type="audio/mpeg">
+        </audio>
 
     <!-- Footer -->
     <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">

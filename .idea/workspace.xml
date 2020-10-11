@@ -4,7 +4,15 @@
     <list default="true" id="21439253-a547-4a6d-b05d-878c76d8561f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/people/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/people/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +258,12 @@
       <workItem from="1601744337839" duration="4387000" />
       <workItem from="1601792498016" duration="3017000" />
       <workItem from="1601801596357" duration="2033000" />
-      <workItem from="1601820722742" duration="597000" />
+      <workItem from="1601820722742" duration="1596000" />
+      <workItem from="1601923207644" duration="7247000" />
+      <workItem from="1601970302936" duration="1633000" />
+      <workItem from="1601989444536" duration="149000" />
+      <workItem from="1602089019289" duration="4474000" />
+      <workItem from="1602397006811" duration="4289000" />
     </task>
     <servers />
   </component>
@@ -277,10 +290,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="354" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600578043851" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1600672200624">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601933204298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600672200624" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601933204298" />
     <state x="741" y="226" key="NewPhpClassDialog" timestamp="1600572940092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

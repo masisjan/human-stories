@@ -29,7 +29,7 @@ class Post extends Model
 
     public function music()
     {
-        return $this->belongsTo(Music::class);
+        return $this->belongsTo(Music::class, 'music_fon_id');
     }
 
     public function user()

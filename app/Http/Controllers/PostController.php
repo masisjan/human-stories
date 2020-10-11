@@ -81,11 +81,9 @@ class PostController extends Controller
         ]);
 
         $img_name = $request->friend_id;
-//        $img_delete = $request->image;
         $admin_id = auth()->user()->id;
         $image_new_name = date('Y-m-d-H-i-s') . '.' . $request->file('image')->getClientOriginalExtension();
         $image_path = $request->file('image')->storeAs('uploads/image/' . $img_name, $image_new_name, 'public');
-//        Storage::delete($img_delete);
 
         $form_data = array(
             'admin_id'               =>  $admin_id,

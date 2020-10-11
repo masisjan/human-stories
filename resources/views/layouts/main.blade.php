@@ -14,7 +14,6 @@
     <link href=" {{ asset('css/style_md.css') }} " rel="stylesheet">
     <link href=" {{ asset('css/style_sm.css') }} " rel="stylesheet">
     <link href=" {{ asset('css/style_xl.css') }} " rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 </head>
 <body>
 
@@ -23,5 +22,6 @@
 <script src=" {{ asset('js/popper.min.js') }} "></script>
 <script src=" {{ asset('js/bootstrap.min.js') }} "></script>
 <script src=" {{ asset('js/app.js') }} "></script>
+@stack('scripts')
 </body>
 </html>

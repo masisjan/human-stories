@@ -45,7 +45,11 @@
                                     <div class="form-group row">
                                         <label for="music_fon_id" class="col-md-3 col-form-label">Music fon</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->music_fon_id}}</p>
+                                            <p class="form-control-plaintext text-muted">{{ $post->music->name}}</p>
+                                            <audio controls>
+                                                <source src="{{ asset('storage/uploads/music/' . $post->music->path) }}" type="audio/ogg; codecs=vorbis">
+                                                <source src="{{ asset('storage/uploads/music/' . $post->music->path) }}" type="audio/mpeg">
+                                            </audio>
                                         </div>
                                     </div>
 
@@ -138,10 +142,14 @@
                                         <div class="col-md-9 offset-md-3">
                                             <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info">Edit</a>
                                             @if(auth()->user()->type == 'admin')
-                                            <a href="{{ route('posts.destroy', [$post->id]) }}" class="btn btn-outline-danger">Delete</a>
+                                            <a href="{{ route('posts.destroy', $post->id) }}" class="btn btn-delete btn-outline-danger">Delete</a>
                                             @endif
-                                            <a href="{{ route('posts.index') }}" class="btn btn-delete btn-outline-secondary" >Cancel</a>
+                                            <a href="{{ route('posts.index') }}" class="btn btn-outline-secondary" >Cancel</a>
                                         </div>
+                                        <form id="form-delete" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                     </div>
                                 </div>
                             </div>
