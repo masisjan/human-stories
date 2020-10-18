@@ -36,7 +36,7 @@
                                             <th scope="row"> {{ $index + 1 }} </th>
                                             <th scope="row"> {{ $index + $friends->firstItem() }} </th>
                                             <td> {{ $friend->name }} </td>
-{{--                                            <td> {{ $friend->cities->name }} </td>--}}
+                                            <td> {{ $friend->city->name }} </td>
                                             <td> {{ $friend->tel }} </td>
                                             <td> {{ $friend->email }} </td>
                                             <td width="150">
