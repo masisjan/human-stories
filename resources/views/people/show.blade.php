@@ -36,7 +36,7 @@
         <i class="fa fa-picture-o w3-xxlarge"></i>
         <p>PHOTOS</p>
     </a>
-    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <a href="#videos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fa fa-file-video-o w3-xxlarge"></i>
         <p>VIDEOS</p>
     </a>
@@ -52,17 +52,17 @@
         <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
         <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
         <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+        <a href="#videos" class="w3-bar-item w3-button" style="width:25% !important">VIDEOS</a>
     </div>
 </div>
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
-    <!-- Header/Home -->
+    <!--                                        Home              -->
     <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> John Doe.</h1>
-        <p>Photographer and Web Designer.</p>
-        <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" alt="boy" class="w3-image" width="992" height="1108">
+        <h1 class="w3-jumbo">{{ $post->name }}</h1>
+        <p>{{ $post->position }}</p>
+        <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" alt="boy" class="w3-image" width="700">
     </header>
 
     <!-- About Section -->
@@ -74,28 +74,41 @@
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
 
-    <!-- Portfolio Section -->
+    <!--                                       photo                         -->
     <div class="w3-padding-64 w3-content" id="photos">
         <h2 class="w3-text-light-grey">My Photos</h2>
         <hr style="width:200px" class="w3-opacity">
 
-        <!-- Grid for photos -->
         <div class="w3-row-padding" style="margin:0 -16px">
             <div class="w3-half">
                 <img src="/w3images/wedding.jpg" style="width:100%">
-                <img src="/w3images/rocks.jpg" style="width:100%">
-                <img src="/w3images/sailboat.jpg" style="width:100%">
             </div>
 
             <div class="w3-half">
                 <img src="/w3images/underwater.jpg" style="width:100%">
-                <img src="/w3images/chef.jpg" style="width:100%">
-                <img src="/w3images/wedding.jpg" style="width:100%">
-                <img src="/w3images/p6.jpg" style="width:100%">
             </div>
-            <!-- End photo grid -->
         </div>
-        <!-- End Portfolio Section -->
+    </div>
+
+        <!--                                       video                         -->
+    <div class="w3-padding-64 w3-content" id="videos">
+        <h2 class="w3-text-light-grey">My Videos</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+                <iframe width="450" height="253.125" src="https://www.youtube.com/embed/aPoNUhUzjg8" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                        picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="w3-half">
+                <iframe width="450" height="253.125" src="https://www.youtube.com/embed/aPoNUhUzjg8" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                        picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
     </div>
 
     <!-- Contact Section -->
@@ -128,7 +141,7 @@
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+        <p class="w3-medium"><a href="/" target="_blank" class="w3-hover-text-blue">Մարդկային պատմություններ</a></p>
         <!-- End footer -->
     </footer>
 

@@ -63,7 +63,7 @@
                                     <div class="form-group row">
                                         <label for="image" class="col-md-3 col-form-label">Image</label>
                                         <div class="col-md-9">
-                                            <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:100px" alt=""><br>
+                                            <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:150px" alt=""><br>
                                         </div>
                                     </div>
 
@@ -112,7 +112,11 @@
                                     <div class="form-group row">
                                         <label for="images" class="col-md-3 col-form-label">Images</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->images }}</p>
+                                            @if ($post->images)
+                                                @foreach ($images as $image)
+                                                <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $image) }}" style="width:200px" alt="">
+                                                @endforeach
+                                            @endif
                                         </div>
                                     </div>
 

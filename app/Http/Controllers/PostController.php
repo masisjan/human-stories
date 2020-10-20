@@ -30,10 +30,7 @@ class PostController extends Controller
         $music = Music::orderBy('name')->pluck('name', 'id');
 
         $user_id = auth()->user()->id;
-//        dd($user_id);
         $posts_users = Post::orderBy('name')->where('admin_id', $user_id)->paginate(5);
-//        dd($posts);
-//        dd($posts_users);
 
         return view('admins.posts.index', compact('posts', 'users', 'friends', 'music', 'cities', 'posts_users'));
     }
@@ -82,8 +79,21 @@ class PostController extends Controller
 
         $img_name = $request->friend_id;
         $admin_id = auth()->user()->id;
+
+//        glxavor nkar@ sarqelu hamar
+
         $image_new_name = date('Y-m-d-H-i-s') . '.' . $request->file('image')->getClientOriginalExtension();
         $image_path = $request->file('image')->storeAs('uploads/image/' . $img_name, $image_new_name, 'public');
+
+//        nkarner@ sarqelu hamar
+
+        $img_arr = array();
+        foreach ($request->File('images') as $img) {
+                $imgs_new_name = rand(111111, 999999) . '.' . $img->getClientOriginalExtension();
+                $imgs_path = $img->storeAs('uploads/image/' . $img_name, $imgs_new_name, 'public');
+                array_push($img_arr, "$imgs_new_name");
+        }
+        $img_arr_string = implode(",", $img_arr);
 
         $form_data = array(
             'admin_id'               =>  $admin_id,
@@ -99,7 +109,7 @@ class PostController extends Controller
             'biography'              =>  $request->biography,
             'other'                  =>  $request->other,
             'speech'                 =>  $request->speech,
-            'images'                 =>  $request->images,
+            'images'                 =>  $img_arr_string,
             'family'                 =>  $request->family,
             'gender'                 =>  $request->gender,
             'publish'                =>  $request->publish,
@@ -108,13 +118,8 @@ class PostController extends Controller
 
         Post::create($form_data);
 
-        return redirect()->route('posts.index', compact('image_path','image_new_name'))
+        return redirect()->route('posts.index', compact('image_path','image_new_name', 'imgs_path','imgs_new_name'))
             ->with('message', "Contact has been updated successfully");
-
-//        dd($request->all());
-//        dd($request->only('first_name', 'last_name'));
-//        dd($request->except('first_name', 'last_name'));
-
     }
 
     public function show($id)
@@ -124,7 +129,10 @@ class PostController extends Controller
         $friends = Friend::orderBy('name')->pluck('name', 'id');
         $cities = City::orderBy('name')->pluck('name', 'id')->prepend('All Cities', '');
         $music = Music::orderBy('name')->pluck('name', 'id');
-        return view('admins.posts.show', compact('post', 'users', 'friends', 'cities', 'music')); // ['contact' => $contact]
+
+        $images = explode(',', $post->images);
+
+        return view('admins.posts.show', compact('post', 'users', 'friends', 'cities', 'music', 'images')); // ['contact' => $contact]
     }
 
     public function people($id)
