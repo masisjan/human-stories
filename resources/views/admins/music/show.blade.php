@@ -31,8 +31,8 @@
                                         <label for="path" class="col-md-3 col-form-label">Audio</label>
                                         <div class="col-md-9">
                                             <audio controls>
-                                                <source src="{{ asset('storage/uploads/music/' . $music->path) }}" type="audio/ogg; codecs=vorbis">
-                                                <source src="{{ asset('storage/uploads/music/' . $music->path) }}" type="audio/mpeg">
+                                                <source src="{{ asset('storage/uploads/music/'. $music->singer_id . "/" . $music->path) }}" type="audio/ogg; codecs=vorbis">
+                                                <source src="{{ asset('storage/uploads/music/' . $music->singer_id . "/" . $music->path) }}" type="audio/mpeg">
                                             </audio>
                                         </div>
                                     </div>

@@ -42,8 +42,10 @@ class MusicController extends Controller
             'path' => 'required|mimes:audio/mpeg,mp3,',
         ]);
 
+        $music_name = $request->singer_id;
+
         $music_new_name = date('Y-m-d-H-i-s') . '.' . $request->file('path')->getClientOriginalExtension();
-        $music_path = $request->file('path')->storeAs('uploads/music', $music_new_name, 'public');
+        $music_path = $request->file('path')->storeAs('uploads/music/' . $music_name, $music_new_name, 'public');
 
         $form = array(
             'singer_id'               =>  $request->singer_id,

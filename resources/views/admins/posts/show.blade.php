@@ -44,13 +44,15 @@
 
                                     <div class="form-group row">
                                         <label for="music_fon_id" class="col-md-3 col-form-label">Music fon</label>
-                                        <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->music->name}}</p>
-                                            <audio controls>
-                                                <source src="{{ asset('storage/uploads/music/' . $post->music->path) }}" type="audio/ogg; codecs=vorbis">
-                                                <source src="{{ asset('storage/uploads/music/' . $post->music->path) }}" type="audio/mpeg">
-                                            </audio>
-                                        </div>
+                                        @if($post->music_fon_id)
+                                            <div class="col-md-9">
+                                                <p class="form-control-plaintext text-muted">{{ $post->music->name}}</p>
+                                                <audio controls>
+                                                    <source src="{{ asset('storage/uploads/music/' . $post->music->singer_id . "/" . $post->music->path) }}" type="audio/ogg; codecs=vorbis">
+                                                    <source src="{{ asset('storage/uploads/music/' . $post->music->singer_id . "/" . $post->music->path) }}" type="audio/mpeg">
+                                                </audio>
+                                            </div>
+                                        @endif
                                     </div>
 
                                     <div class="form-group row">
@@ -114,7 +116,7 @@
                                         <div class="col-md-9">
                                             @if ($post->images)
                                                 @foreach ($images as $image)
-                                                <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $image) }}" style="width:200px" alt="">
+                                                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $image) }}" style="width:200px" alt="">
                                                 @endforeach
                                             @endif
                                         </div>

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="21439253-a547-4a6d-b05d-878c76d8561f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/people/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/people/show.blade.php" afterDir="false" />
@@ -151,7 +153,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admins" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -160,7 +162,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -261,7 +263,12 @@
       <workItem from="1602445373964" duration="512000" />
       <workItem from="1602993310577" duration="4761000" />
       <workItem from="1603042084546" duration="2658000" />
-      <workItem from="1603216045385" duration="5150000" />
+      <workItem from="1603216045385" duration="5470000" />
+      <workItem from="1603261340441" duration="119000" />
+      <workItem from="1603261482578" duration="133000" />
+      <workItem from="1603261632251" duration="1070000" />
+      <workItem from="1603291272099" duration="7635000" />
+      <workItem from="1603373269382" duration="9434000" />
     </task>
     <servers />
   </component>
@@ -288,10 +295,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="354" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600578043851" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1601933204298">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1603261744970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601933204298" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603261744970" />
+    <state width="1874" height="268" key="GridCell.Tab.0.bottom" timestamp="1603261619824">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603261619824" />
+    <state width="1874" height="268" key="GridCell.Tab.0.center" timestamp="1603261619824">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603261619824" />
+    <state width="1874" height="268" key="GridCell.Tab.0.left" timestamp="1603261619824">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603261619824" />
+    <state width="1874" height="268" key="GridCell.Tab.0.right" timestamp="1603261619824">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="268" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603261619824" />
     <state x="741" y="226" key="NewPhpClassDialog" timestamp="1600572940092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -304,10 +327,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="138" width="730" height="764" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600578045920" />
-    <state x="523" y="103" key="SettingsEditor" timestamp="1600626013224">
+    <state x="523" y="103" key="SettingsEditor" timestamp="1603261747264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="523" y="103" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600626013224" />
+    <state x="523" y="103" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603261747264" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600577313223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,22 +1,6 @@
 <div class="row">
     <div class="col-md-12">
 
-{{--        <div class="form-group row">--}}
-{{--            <label for="company_id" class="col-md-3 col-form-label">Admin</label>--}}
-{{--            <div class="col-md-9">--}}
-{{--                <select name="admin_id" class="custom-select @error('admin_id') is-invalid @enderror">--}}
-{{--                    @foreach($users as $id => $name)--}}
-{{--                        <option {{ $id == old('admin_id', $post->admin_id) ? 'selected' : '' }} value="{{ $id }}">{{ $name }}</option>--}}
-{{--                    @endforeach--}}
-{{--                </select>--}}
-{{--                @error('admin_id')--}}
-{{--                <div class="invalid-feedback">--}}
-{{--                    {{ $message }}--}}
-{{--                </div>--}}
-{{--                @enderror--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
         <div class="form-group row">
             <label for="company_id" class="col-md-3 col-form-label">Friend</label>
             <div class="col-md-9">
@@ -96,7 +80,7 @@
             <label for="image" class="col-md-3 col-form-label">Image</label>
             <div class="col-md-9">
                 @if($post->image)
-                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:100px" alt=""><br>
+                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:150px" alt=""><br>
                     <input type="hidden" name="image" value="{{ $post->image }}" id="image" class=" @error('image') is-invalid @enderror">
                 @else
                     <input type="file" name="image" value="{{ old('image', $post->image) }}" id="image" class=" @error('image') is-invalid @enderror">
@@ -183,7 +167,9 @@
             <label for="images" class="col-md-3 col-form-label">Images</label>
             <div class="col-md-9">
                 @if($post->images)
-                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->images) }}" style="width:100px" alt=""><br>
+                    @foreach ($images as $image)
+                        <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $image) }}" style="width:200px" alt="">
+                    @endforeach
                     <input type="hidden" name="images" value="{{ $post->images }}" id="images" class=" @error('images') is-invalid @enderror">
                 @else
                     <input type="file" multiple name="images[]" value="{{ old('images', $post->images) }}" id="images" class=" @error('images') is-invalid @enderror">
