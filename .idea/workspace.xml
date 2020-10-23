@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21439253-a547-4a6d-b05d-878c76d8561f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/css/people.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/slideshow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MusicController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/music/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/people/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/people/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -268,7 +267,9 @@
       <workItem from="1603261482578" duration="133000" />
       <workItem from="1603261632251" duration="1070000" />
       <workItem from="1603291272099" duration="7635000" />
-      <workItem from="1603373269382" duration="9434000" />
+      <workItem from="1603373269382" duration="10241000" />
+      <workItem from="1603431433683" duration="13000" />
+      <workItem from="1603442235543" duration="4744000" />
     </task>
     <servers />
   </component>

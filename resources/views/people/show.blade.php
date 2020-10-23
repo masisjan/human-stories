@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Մարդկային պատմություններ</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:url"           content="{{ url("/people/{$post->id}") }}" />
@@ -9,38 +9,25 @@
 <meta property="og:description"   content="Your description" />
 <meta property="og:image"         content="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="{{ asset('css/people.css') }} ">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: #222;}
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {margin-left: 120px}
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
+
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
     <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:100%" alt="">
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-        <i class="fa fa-home w3-xxlarge"></i><br>ԳԼԽԱՎՈՐ
-    </a>
+        <i class="fa fa-home w3-xxlarge"></i><br>ԳԼԽԱՎՈՐ</a>
     <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-user w3-xxlarge"></i><br>ՄԱՍԻՆ
-    </a>
+        <i class="fa fa-user w3-xxlarge"></i><br>ՄԱՍԻՆ</a>
     <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-picture-o w3-xxlarge"></i><br>ՆԿԱՐՆԵՐ
-    </a>
+        <i class="fa fa-picture-o w3-xxlarge"></i><br>ՆԿԱՐՆԵՐ</a>
     <a href="#videos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-file-video-o w3-xxlarge"></i><br>ՏԵՍԱՆՅՈՒԹԵՐ
-    </a>
+        <i class="fa fa-file-video-o w3-xxlarge"></i><br>ՏԵՍԱՆՅՈՒԹԵՐ</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-comments w3-xxlarge"></i><br>ԿԱՐԾԻՔՆԵՐ
-    </a>
+        <i class="fa fa-comments w3-xxlarge"></i><br>ԿԱՐԾԻՔՆԵՐ</a>
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
@@ -57,9 +44,15 @@
 <div class="w3-padding-large" id="main">
     <!--                                        Home              -->
     <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <h1 class="w3-jumbo">{{ $post->name }}</h1>
-        <p>{{ $post->position }}</p>
-        <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" alt="boy" class="w3-image" width="700">
+        @if ($post->name)
+            <h1 class="w3-jumbo">{{ $post->name }}</h1>
+        @endif
+        @if ($post->position)
+            <p>{{ $post->position }}</p>
+        @endif
+        @if ($post->image)
+            <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" alt="boy" class="w3-image" width="700">
+        @endif
     </header>
 
     <!-- About Section -->
@@ -69,20 +62,34 @@
         <p>{{ $post->biography }}</p>
 
     <!--                                       photo                         -->
+        @if ($post->images)
     <div class="w3-padding-64 w3-content" id="photos">
         <h2 class="w3-text-light-grey">ՆԿԱՐՆԵՐ</h2>
         <hr style="width:200px" class="w3-opacity">
 
-        <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-                <img src="/w3images/wedding.jpg" style="width:100%">
-            </div>
+        <div class="container">
+            @foreach ($images as $image)
+                <div class="mySlides">
+                    <div class="numbertext">{{ $i++ }} / {{ count($images) }}</div>
+                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $image) }}" style="width:100%">
+                </div>
+            @endforeach
 
-            <div class="w3-half">
-                <img src="/w3images/underwater.jpg" style="width:100%">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="row">
+                @foreach ($images as $image)
+                    <div class="column">
+                        <img class="demo cursor" src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $image) }}"
+                             style="width:100%" onclick="currentSlide({{ $j++ }})" alt="The Woods">
+                    </div>
+                @endforeach
             </div>
         </div>
+
     </div>
+    @endif
 
         <!--                                       video                         -->
     <div class="w3-padding-64 w3-content" id="videos">
@@ -123,10 +130,10 @@
         <p>Թողնել կարծիք {{ $post->name }}ի մասին:</p>
 
         <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Tel" required name="Subject"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Անուն" required name="Name"></p>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Էլ. Փոստ" required name="Email"></p>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Հեռախոս" required name="Subject"></p>
+            <p><input class="w3-input w3-padding-16" type="text" placeholder="Կարծիք" required name="Message"></p>
             <p>
                 <button class="w3-button w3-light-grey w3-padding-large" type="submit">
                     <i class="fa fa-paper-plane"></i> ԹՈՂՆԵԼ ԿԱՐԾԻՔ
@@ -153,20 +160,14 @@
     <!-- END PAGE CONTENT -->
 </div>
 </div>
+
+<div id="fb-root"></div>
 <script src=" {{ asset('js/jquery.min.js') }} "></script>
 <script src=" {{ asset('js/popper.min.js') }} "></script>
 <script src=" {{ asset('js/bootstrap.min.js') }} "></script>
 <script src=" {{ asset('js/app.js') }} "></script>
-
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+<script src=" {{ asset('js/slideshow.js') }} "></script>
+<script src=" {{ asset('js/fb.js') }} "></script>
 
 </body>
 </html>

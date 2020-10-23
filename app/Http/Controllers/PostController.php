@@ -210,7 +210,13 @@ class PostController extends Controller
         $friends = Friend::orderBy('name')->pluck('name', 'id');
         $cities = City::orderBy('name')->pluck('name', 'id');
         $music = Music::orderBy('name')->pluck('name', 'id');
-        return view('people.show', compact('post', 'users', 'friends', 'cities', 'music')); // ['contact' => $contact]
+
+//                                                             SLAYDSHOW
+        $images = explode(',', $post->images);
+        $i = 1;
+        $j = 1;
+
+        return view('people.show', compact('post', 'users', 'friends', 'cities', 'music', 'images', 'i', 'j')); // ['contact' => $contact]
     }
 
     public function home()
