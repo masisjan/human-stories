@@ -17,21 +17,6 @@
             </div>
         </div>
 
-{{--        <div class="form-group row">--}}
-{{--            <label for="company_id" class="col-md-3 col-form-label">Type comments</label>--}}
-{{--            <div class="col-md-9">--}}
-{{--                <select name="type_comment" class="custom-select @error('type_comment') is-invalid @enderror">--}}
-{{--                    <option value="not">not</option>--}}
-{{--                    <option value="yes">yes</option>--}}
-{{--                </select>--}}
-{{--                @error('type_comment')--}}
-{{--                <div class="invalid-feedback">--}}
-{{--                    {{ $message }}--}}
-{{--                </div>--}}
-{{--                @enderror--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
         <div class="form-group row">
             <label for="comment" class="col-md-3 col-form-label">Comment</label>
             <div class="col-md-9">

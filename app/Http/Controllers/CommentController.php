@@ -40,8 +40,9 @@ class CommentController extends Controller
         ]);
 
         Comment::create($request->all());
-        return redirect()->route('comments.index')
-            ->with('message', "Contact has been updated successfully");
+        return back()->with('message', "Contact has been updated successfully");
+//        return redirect()->route('comments.index')
+//            ->with('message', "Contact has been updated successfully");
     }
 
     public function show($id)
@@ -67,5 +68,11 @@ class CommentController extends Controller
         $posts = Post::orderBy('name')->pluck('name', 'id')->prepend('All Friend', '');
         return view('admins.comments.edit', compact('posts', 'comment'));
 
+    }
+
+    public function destroy($id)
+    {
+        $comment = Comment::findOrFail($id)->delete();
+        return redirect()->route('comments.index')->with('message', "Contact has been deleted successfully");
     }
 }

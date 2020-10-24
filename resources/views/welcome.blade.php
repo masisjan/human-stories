@@ -63,13 +63,13 @@
             </div>
             <div class="col col_4 col_4_md col_12_sm ">
                 <img src="{{asset('images/fon/planeta_01.png')}}" class="image center_img"  alt="">
+                <p class="p_white php">{{ $qr->count() }}</p>
                 <p class="p_white center">QR ԿՈԴԵՐ</p>
-                <p class="p_white php">{{ $posts->count() }}</p>
             </div>
             <div class="col col_4 col_4_md col_12_sm ">
                 <img src="{{asset('images/fon/planeta_03.png')}}" class="image center_img"  alt="">
+                <p class="p_white php">0</p>
                 <p class="p_white center">ԱՅԼ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</p>
-                <p class="p_white php">{{ $posts->count() }}</p>
             </div>
         </div>
     </div>

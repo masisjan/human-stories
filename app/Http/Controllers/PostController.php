@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\City;
 use App\Admin;
+use App\Comment;
 use App\Music;
 use App\Post;
 use App\Friend;
@@ -210,15 +211,17 @@ class PostController extends Controller
         $friends = Friend::orderBy('name')->pluck('name', 'id');
         $cities = City::orderBy('name')->pluck('name', 'id');
         $music = Music::orderBy('name')->pluck('name', 'id');
+        $comments = Comment::latest()->paginate(10);
 
         $videos = explode(',', $post->video);
-
+        $speechs = explode('+', $post->speech);
 //                                                             SLAYDSHOW
         $images = explode(',', $post->images);
         $i = 1;
         $j = 1;
 
-        return view('people.show', compact('post', 'users', 'friends', 'cities', 'music', 'images', 'i', 'j', 'videos')); // ['contact' => $contact]
+        return view('people.show', compact('post', 'users', 'friends', 'cities', 'music', 'images',
+                                                        'i', 'j', 'videos', 'speechs', 'comments'));
     }
 
     public function home()
@@ -228,7 +231,8 @@ class PostController extends Controller
         $friends = Friend::orderBy('name')->pluck('name', 'id');
         $cities = City::orderBy('name')->pluck('name', 'id');
         $music = Music::orderBy('name')->pluck('name', 'id');
-        return view('welcome', compact('posts', 'users', 'friends', 'cities', 'music')); // ['contact' => $contact]
+        $qr = Post::orderBy('name')->where('qr', 'yes');
+        return view('welcome', compact('posts', 'users', 'friends', 'cities', 'music', 'qr'));
     }
 
     public function destroy($id)

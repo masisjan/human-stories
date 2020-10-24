@@ -26,6 +26,12 @@ img {
     cursor: pointer;
 }
 
+.borderElement {
+    background-color: #909090;
+    color: #000;
+    border-radius: 0 15px 15px 15px;
+}
+
 /* Next & previous buttons */
 .prev,
 .next {

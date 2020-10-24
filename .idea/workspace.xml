@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21439253-a547-4a6d-b05d-878c76d8561f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/people/_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/posts/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/people.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/people.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admins/comments/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admins/comments/_form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/people/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/people/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +155,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/people" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -165,16 +168,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\people" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\Cities" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\public\images" />
+      <recent name="C:\xampp\htdocs\human-stories.loc\public\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\posts" />
       <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\admins\Cities" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\resources\views\people" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\public\images" />
-      <recent name="C:\xampp\htdocs\human-stories.loc\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -270,7 +273,8 @@
       <workItem from="1603373269382" duration="10241000" />
       <workItem from="1603431433683" duration="13000" />
       <workItem from="1603442235543" duration="9009000" />
-      <workItem from="1603536188948" duration="673000" />
+      <workItem from="1603536188948" duration="755000" />
+      <workItem from="1603549365496" duration="11079000" />
     </task>
     <servers />
   </component>
@@ -289,10 +293,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="117" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600010505452" />
-    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601215475814">
+    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603562038990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601215475814" />
+    <state x="211" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603562038990" />
     <state x="354" y="85" key="DiffContextDialog" timestamp="1600578043851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

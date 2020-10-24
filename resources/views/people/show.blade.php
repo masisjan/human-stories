@@ -54,6 +54,9 @@
         @if ($post->image)
             <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" alt="boy" class="w3-image" width="700">
         @endif
+        @if ($post->date)
+                <h2>{{ $post->date }}</h2>
+        @endif
     </header>
 
     <!-- About Section -->
@@ -64,7 +67,16 @@
             <p>{{ $post->biography }}</p>
         @endif
 
-    <!--                                       photo                         -->
+        <!--                                       Ayl nshumner  -->
+    @if ($post->other)
+    <div class="w3-padding-64 w3-content" id="">
+        <h2 class="w3-text-light-grey">ԱՅԼ ՆՇՈՒՄՆԵՐ</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p>{{ $post->other }}</p>
+    </div>
+    @endif
+
+    <!--                                       slaydshow                       -->
     @if ($post->images)
     <div class="w3-padding-64 w3-content" id="photos">
         <h2 class="w3-text-light-grey">ՆԿԱՐՆԵՐ</h2>
@@ -92,6 +104,17 @@
     </div>
     @endif
 
+        <!--                                       xosqer -->
+    @if ($post->speech)
+        <div class="w3-padding-64 w3-content" id="">
+            <h2 class="w3-text-light-grey">ԽՈՍՔԵՐ</h2>
+            <hr style="width:200px" class="w3-opacity">
+            @foreach ($speechs as $speech)
+            <p>{{ $speech }}</p>
+            @endforeach
+        </div>
+    @endif
+
         <!--                                       video  -->
     @if ($post->video)
     <div class="w3-padding-64 w3-content" id="videos">
@@ -107,41 +130,37 @@
                 </iframe>
             </div>
             @endforeach
-
         </div>
     </div>
     @endif
 
-    <div class="w3-padding-64 w3-content" id="videos">
+        <!--                                       kartiqner  -->
+    @if($comments->count())
+    <div class="w3-padding-64 w3-content" id="contact">
         <h2 class="w3-text-light-grey">ԿԱՐԾԻՔՆԵՐ</h2>
         <hr style="width:200px" class="w3-opacity">
-
         <div class="w3-row-padding" style="margin:0 -16px">
-            <div class="w3-half">
-            </div>
-            <div class="w3-half">
-            </div>
+            @foreach($comments as $comment)
+                <div class="borderElement">
+                   <p class="w3-row-padding"> {{ $comment->comment }} </p>
+                </div>
+            @endforeach
         </div>
     </div>
+    @endif
 
     <!-- Commit Section -->
-    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    @if($post->type_comment == "yes")
+    <div class="w3-padding-64 w3-content w3-text-grey" id="">
         <hr>
         <p>Թողնել կարծիք {{ $post->name }}ի մասին:</p>
-
-        <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Անուն" required name="Name"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Էլ. Փոստ" required name="Email"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Հեռախոս" required name="Subject"></p>
-            <p><input class="w3-input w3-padding-16" type="text" placeholder="Կարծիք" required name="Message"></p>
-            <p>
-                <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-                    <i class="fa fa-paper-plane"></i> ԹՈՂՆԵԼ ԿԱՐԾԻՔ
-                </button>
-            </p>
+        <form action="{{ route('comments.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @include('people._form')
         </form>
-        <!-- End Commit Section -->
     </div>
+    @endif
+    <!-- End Commit Section -->
         <audio controls autoplay>
             <source src="{{ asset('storage/uploads/music/'. $post->music->singer_id . "/" . $post->music->path) }}" type="audio/ogg">
             <source src="{{ asset('storage/uploads/music/'. $post->music->singer_id . "/" . $post->music->path) }}" type="audio/mpeg">
