@@ -2,7 +2,7 @@
     <div class="col-md-12">
 
         <div class="form-group row">
-            <label for="company_id" class="col-md-3 col-form-label">Friend</label>
+            <label for="company_id" class="col-md-3 col-form-label">Ընկերը</label>
             <div class="col-md-9">
                 <select name="friend_id" class="custom-select @error('friend_id') is-invalid @enderror">
                     @foreach($friends as $id => $name)
@@ -18,7 +18,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="city_id" class="col-md-3 col-form-label">City</label>
+            <label for="city_id" class="col-md-3 col-form-label">Քաղաքը</label>
             <div class="col-md-9">
                 <select name="city_id" class="custom-select @error('city_id') is-invalid @enderror">
                     @foreach($city as $id => $name)
@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="company_id" class="col-md-3 col-form-label">Type comments</label>
+            <label for="company_id" class="col-md-3 col-form-label">Կարծիք ստատուս</label>
             <div class="col-md-9">
                 <select name="type_comment" class="custom-select @error('type_comment') is-invalid @enderror">
                     <option value="not">not</option>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="music_fon_id" class="col-md-3 col-form-label">Fon Music</label>
+            <label for="music_fon_id" class="col-md-3 col-form-label">Ֆոնային երաժտություն</label>
             <div class="col-md-9">
                 <select name="music_fon_id" class="custom-select @error('music_fon_id') is-invalid @enderror">
                     @foreach($music as $id => $name)
@@ -65,7 +65,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="video" class="col-md-3 col-form-label">Video</label>
+            <label for="video" class="col-md-3 col-form-label">Տեսանյութ</label>
             <div class="col-md-9">
                 <input type="text" name="video" value="{{ old('video', $post->video) }}" id="video" class="form-control @error('video') is-invalid @enderror">
                 @error('video')
@@ -77,7 +77,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="image" class="col-md-3 col-form-label">Image</label>
+            <label for="image" class="col-md-3 col-form-label">Գլխավոր նկար</label>
             <div class="col-md-9">
                 @if($post->image)
                     <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:150px" alt=""><br>
@@ -92,7 +92,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="first_name" class="col-md-3 col-form-label">Name</label>
+            <label for="first_name" class="col-md-3 col-form-label">Անուն</label>
             <div class="col-md-9">
                 <input type="text" name="name" value="{{ old('name', $post->name) }}" id="name" class="form-control @error('name') is-invalid @enderror">
                 @error('name')
@@ -104,7 +104,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="date" class="col-md-3 col-form-label">date</label>
+            <label for="date" class="col-md-3 col-form-label">Ամսաթիվ</label>
             <div class="col-md-9">
                 <input type="text" name="date" value="{{ old('date', $post->date) }}" id="date" class="form-control @error('date') is-invalid @enderror">
                 @error('date')
@@ -116,7 +116,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="position" class="col-md-3 col-form-label">Position</label>
+            <label for="position" class="col-md-3 col-form-label">Պաշտոն</label>
             <div class="col-md-9">
                 <input type="text" name="position" value="{{ old('position', $post->position) }}" id="position" class="form-control @error('position') is-invalid @enderror">
                 @error('position')
@@ -128,7 +128,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="biography" class="col-md-3 col-form-label">Biography</label>
+            <label for="biography" class="col-md-3 col-form-label">Կենսագրություն</label>
             <div class="col-md-9">
                 <textarea name="biography" id="biography" rows="3" class="form-control @error('biography') is-invalid @enderror">{{ old('biography', $post->biography) }}</textarea>
                 @error('biography')
@@ -140,7 +140,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="other" class="col-md-3 col-form-label">Other</label>
+            <label for="other" class="col-md-3 col-form-label">Այլ նշումներ</label>
             <div class="col-md-9">
                 <textarea name="other" id="other" rows="3" class="form-control @error('other') is-invalid @enderror">{{ old('other', $post->other) }}</textarea>
                 @error('other')
@@ -152,7 +152,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="speech" class="col-md-3 col-form-label">Speech</label>
+            <label for="speech" class="col-md-3 col-form-label">Խոսքեր</label>
             <div class="col-md-9">
                 <textarea name="speech" id="speech" rows="3" class="form-control @error('speech') is-invalid @enderror">{{ old('speech', $post->speech) }}</textarea>
                 @error('speech')
@@ -164,7 +164,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="images" class="col-md-3 col-form-label">Images</label>
+            <label for="images" class="col-md-3 col-form-label">Նկարներ</label>
             <div class="col-md-9">
                 @if($post->images)
                     @foreach ($images as $image)
@@ -181,7 +181,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="family" class="col-md-3 col-form-label">Family</label>
+            <label for="family" class="col-md-3 col-form-label">Ընտանիք</label>
             <div class="col-md-9">
                 <textarea name="family" id="family" rows="3" class="form-control @error('family') is-invalid @enderror">{{ old('family', $post->family) }}</textarea>
                 @error('family')
@@ -193,7 +193,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="gender" class="col-md-3 col-form-label">Gender</label>
+            <label for="gender" class="col-md-3 col-form-label">Սեռ</label>
             <div class="col-md-9">
                 <select name="gender" class="custom-select @error('gender') is-invalid @enderror">
                     <option value="not">Gender</option>
@@ -209,7 +209,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="publish" class="col-md-3 col-form-label">Publish</label>
+            <label for="publish" class="col-md-3 col-form-label">Հրապարակել</label>
             <div class="col-md-9">
                 <select name="publish" class="custom-select @error('publish') is-invalid @enderror">
                     <option value="not">not</option>
@@ -224,7 +224,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="qr" class="col-md-3 col-form-label">Qr</label>
+            <label for="qr" class="col-md-3 col-form-label">QR ստատուս</label>
             <div class="col-md-9">
                 <select name="qr" class="custom-select @error('qr') is-invalid @enderror">
                     <option value="not">not</option>

@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body class="w3-black">
+@if ($post->publish == "yes")
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -57,16 +58,17 @@
 
     <!-- About Section -->
     <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-        <h2 class="w3-text-light-grey">ԿԵՆՍԱԳՐՈՒԹՅՈՒՆ</h2>
-        <hr style="width:200px" class="w3-opacity">
-        <p>{{ $post->biography }}</p>
+        @if ($post->biography)
+            <h2 class="w3-text-light-grey">ԿԵՆՍԱԳՐՈՒԹՅՈՒՆ</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p>{{ $post->biography }}</p>
+        @endif
 
     <!--                                       photo                         -->
-        @if ($post->images)
+    @if ($post->images)
     <div class="w3-padding-64 w3-content" id="photos">
         <h2 class="w3-text-light-grey">ՆԿԱՐՆԵՐ</h2>
         <hr style="width:200px" class="w3-opacity">
-
         <div class="container">
             @foreach ($images as $image)
                 <div class="mySlides">
@@ -87,30 +89,28 @@
                 @endforeach
             </div>
         </div>
-
     </div>
     @endif
 
-        <!--                                       video                         -->
+        <!--                                       video  -->
+    @if ($post->video)
     <div class="w3-padding-64 w3-content" id="videos">
         <h2 class="w3-text-light-grey">ՏԵՍԱՆՅՈՒԹԵՐ</h2>
         <hr style="width:200px" class="w3-opacity">
 
         <div class="w3-row-padding" style="margin:0 -16px">
+            @foreach ($videos as $video)
             <div class="w3-half">
-                <iframe width="450" height="253.125" src="https://www.youtube.com/embed/aPoNUhUzjg8" frameborder="0"
+                <iframe width="450" height="253.125" src=" {{'https://www.youtube.com/embed/' . $video }}" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
                         picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
-            <div class="w3-half">
-                <iframe width="450" height="253.125" src="https://www.youtube.com/embed/aPoNUhUzjg8" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-                        picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
+            @endforeach
+
         </div>
     </div>
+    @endif
 
     <div class="w3-padding-64 w3-content" id="videos">
         <h2 class="w3-text-light-grey">ԿԱՐԾԻՔՆԵՐ</h2>
@@ -124,7 +124,7 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
+    <!-- Commit Section -->
     <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
         <hr>
         <p>Թողնել կարծիք {{ $post->name }}ի մասին:</p>
@@ -140,7 +140,7 @@
                 </button>
             </p>
         </form>
-        <!-- End Contact Section -->
+        <!-- End Commit Section -->
     </div>
         <audio controls autoplay>
             <source src="{{ asset('storage/uploads/music/'. $post->music->singer_id . "/" . $post->music->path) }}" type="audio/ogg">
@@ -149,13 +149,13 @@
 
     <!-- Footer -->
     <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-        <div class="fb-share-button"
-             data-href="{{ url("/people/{$post->id}") }}"
-             data-layout="button_count">
+        <div class="fb-share-button" data-href="{{ url("/people/{$post->id}") }}" data-layout="button_count">
         </div>
-        <p class="w3-medium"><a href="/" target="_blank" class="w3-hover-text-blue">Մարդկային պատմություններ</a></p>
-        <!-- End footer -->
+        <p class="w3-medium">
+            <a href="/" target="_blank" class="w3-hover-text-blue">Մարդկային պատմություններ</a>
+        </p>
     </footer>
+    <!-- End footer -->
 
     <!-- END PAGE CONTENT -->
 </div>
@@ -168,6 +168,9 @@
 <script src=" {{ asset('js/app.js') }} "></script>
 <script src=" {{ asset('js/slideshow.js') }} "></script>
 <script src=" {{ asset('js/fb.js') }} "></script>
+
+@else <h1 class="w3-jumbo">{{ "Էջը թարմացվում է" }}</h1>
+@endif
 
 </body>
 </html>

@@ -14,7 +14,7 @@
                                 <div class="col-md-12">
                                     @if(auth()->user()->type == 'admin')
                                     <div class="form-group row">
-                                        <label for="admin_id" class="col-md-3 col-form-label">Admin</label>
+                                        <label for="admin_id" class="col-md-3 col-form-label">Տեղադրող</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ auth()->user()->name }}</p>
                                         </div>
@@ -22,28 +22,28 @@
                                     @endif
 
                                     <div class="form-group row">
-                                        <label for="friend_id" class="col-md-3 col-form-label">Friend</label>
+                                        <label for="friend_id" class="col-md-3 col-form-label">Ընկերը</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->friend->name }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="city_id" class="col-md-3 col-form-label">City</label>
+                                        <label for="city_id" class="col-md-3 col-form-label">Քաղաքը</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->city->name}}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="type_comment" class="col-md-3 col-form-label">Type comment</label>
+                                        <label for="type_comment" class="col-md-3 col-form-label">Կարծիք ստատուս</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->type_comment }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="music_fon_id" class="col-md-3 col-form-label">Music fon</label>
+                                        <label for="music_fon_id" class="col-md-3 col-form-label">Ֆոնային երաժտություն</label>
                                         @if($post->music_fon_id)
                                             <div class="col-md-9">
                                                 <p class="form-control-plaintext text-muted">{{ $post->music->name}}</p>
@@ -56,63 +56,63 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="video" class="col-md-3 col-form-label">Video</label>
+                                        <label for="video" class="col-md-3 col-form-label">Տեսանյութ</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->video }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="image" class="col-md-3 col-form-label">Image</label>
+                                        <label for="image" class="col-md-3 col-form-label">Գլխավոր նկար</label>
                                         <div class="col-md-9">
                                             <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:150px" alt=""><br>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="name" class="col-md-3 col-form-label">Name</label>
+                                        <label for="name" class="col-md-3 col-form-label">Անուն</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->name }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="date" class="col-md-3 col-form-label">Date</label>
+                                        <label for="date" class="col-md-3 col-form-label">Ամսաթիվ</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->date }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="position" class="col-md-3 col-form-label">Position</label>
+                                        <label for="position" class="col-md-3 col-form-label">Պաշտոն</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->position }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="biography" class="col-md-3 col-form-label">Biography</label>
+                                        <label for="biography" class="col-md-3 col-form-label">Կենսագրություն</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->biography }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="other" class="col-md-3 col-form-label">Other</label>
+                                        <label for="other" class="col-md-3 col-form-label">Այլ նշումներ</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->other }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="speech" class="col-md-3 col-form-label">Speech</label>
+                                        <label for="speech" class="col-md-3 col-form-label">Խոսքեր</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->speech }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="images" class="col-md-3 col-form-label">Images</label>
+                                        <label for="images" class="col-md-3 col-form-label">Նկարներ</label>
                                         <div class="col-md-9">
                                             @if ($post->images)
                                                 @foreach ($images as $image)
@@ -123,23 +123,30 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="family" class="col-md-3 col-form-label">Family</label>
+                                        <label for="family" class="col-md-3 col-form-label">Ընտանիք</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->family }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="gender" class="col-md-3 col-form-label">Gender</label>
+                                        <label for="gender" class="col-md-3 col-form-label">Սեռ</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->gender }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="publish" class="col-md-3 col-form-label">Publish</label>
+                                        <label for="publish" class="col-md-3 col-form-label">Հրապարակել</label>
                                         <div class="col-md-9">
                                             <p class="form-control-plaintext text-muted">{{ $post->publish }}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="publish" class="col-md-3 col-form-label">QR ստատուս</label>
+                                        <div class="col-md-9">
+                                            <p class="form-control-plaintext text-muted">{{ $post->qr }}</p>
                                         </div>
                                     </div>
 
