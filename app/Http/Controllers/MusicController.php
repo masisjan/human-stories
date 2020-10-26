@@ -10,6 +10,7 @@ use App\Singer;
 use App\User;
 use App\Scopes\FilterScope;
 use App\Scopes\SearchScope;
+use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\Models\Media;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -48,8 +49,8 @@ class MusicController extends Controller
         $music_path = $request->file('path')->storeAs('uploads/music/' . $music_name, $music_new_name, 'public');
 
         $form = array(
-            'singer_id'               =>  $request->singer_id,
-            'name'                   =>  $request->name,
+            'singer_id'             =>  $request->singer_id,
+            'name'                  =>  $request->name,
             'path'                  =>  $music_new_name,
         );
 
@@ -85,10 +86,11 @@ class MusicController extends Controller
         return redirect()->route('music.index')->with('message', "Contact has been updated successfully");
     }
 
-    public function destroy($id)
+    public function destroy($id, Request $request)
     {
+        $music = Music::findOrFail($id);
+        Storage::disk('public')->delete('uploads/music/' . $music->singer_id . '/' . $music->path);
         $music = Music::findOrFail($id)->delete();
-
         return redirect()->route('music.index')->with('message', "Contact has been deleted successfully");
     }
 }

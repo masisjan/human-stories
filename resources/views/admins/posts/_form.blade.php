@@ -171,7 +171,8 @@
                     @foreach ($images as $image)
                         <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $image) }}" style="width:200px" alt="">
                     @endforeach
-                    <input type="hidden" name="images" value="{{ $post->images }}" id="images" class=" @error('images') is-invalid @enderror">
+                    <p>Փոփոխել նկարները</p>
+                    <input type="file" multiple name="images[]" value="{{ old('images', $post->images) }}" id="images" class=" @error('images') is-invalid @enderror">
                 @else
                     <input type="file" multiple name="images[]" value="{{ old('images', $post->images) }}" id="images" class=" @error('images') is-invalid @enderror">
                     @error('images')

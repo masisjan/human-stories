@@ -34,10 +34,12 @@
             <div class="col-md-9">
                 @if($music->path)
                     <audio controls>
-                        <source src="{{ asset('storage/uploads/music/' . $music->path) }}" type="audio/ogg; codecs=vorbis">
-                        <source src="{{ asset('storage/uploads/music/' . $music->path) }}" type="audio/mpeg">
+                        <source src="{{ asset('storage/uploads/music/'. $music->singer_id . "/" . $music->path) }}" type="audio/ogg; codecs=vorbis">
+                        <source src="{{ asset('storage/uploads/music/' . $music->singer_id . "/" . $music->path) }}" type="audio/mpeg">
                     </audio><br>
-                    <input type="hidden" name="path" value="{{ $music->path }}" id="path" class=" @error('path') is-invalid @enderror">
+                    <hr>
+                    <p>Փոփոխել երաժտությունը</p>
+                    <input type="file" name="path" value="{{ old('path', $music->path) }}" id="path" class=" @error('path') is-invalid @enderror">
                 @else
                     <input type="file" name="path" value="{{ old('path', $music->path) }}" id="path" class=" @error('path') is-invalid @enderror">
                     @error('path')

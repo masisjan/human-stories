@@ -46,6 +46,10 @@
                                             @endif
                                             <a href="{{ route('music.index') }}" class="btn btn-outline-secondary" >Cancel</a>
                                         </div>
+                                        <form id="form-delete" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                     </div>
                                 </div>
                             </div>
