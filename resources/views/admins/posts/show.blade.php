@@ -38,7 +38,7 @@
                                     <div class="form-group row">
                                         <label for="type_comment" class="col-md-3 col-form-label">Կարծիք ստատուս</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->type_comment }}</p>
+                                            <p class="form-control-plaintext"  style=" @if ($post->type_comment == "yes") color:green @else color:red @endif">{{ $post->type_comment }}</p>
                                         </div>
                                     </div>
 
@@ -132,21 +132,21 @@
                                     <div class="form-group row">
                                         <label for="gender" class="col-md-3 col-form-label">Սեռ</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->gender }}</p>
+                                            <p class="form-control-plaintext" style="@if ($post->gender == "not") color:red @else color:green @endif">{{ $post->gender }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="publish" class="col-md-3 col-form-label">Հրապարակել</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->publish }}</p>
+                                            <p class="form-control-plaintext" style="@if ($post->publish == "not") color:red @else color:green @endif">{{ $post->publish }}</p>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <label for="publish" class="col-md-3 col-form-label">QR ստատուս</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $post->qr }}</p>
+                                            <p class="form-control-plaintext" style="@if ($post->qr_cod == "not") color:red @else color:green @endif">{{ $post->qr_cod }}</p>
                                         </div>
                                     </div>
 

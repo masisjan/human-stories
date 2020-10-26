@@ -11,7 +11,7 @@ class Post extends Model
 {
 
     protected $fillable = ['admin_id', 'friend_id', 'city_id', 'type_comment', 'music_fon_id', 'video', 'image',
-        'name', 'date', 'position', 'biography', 'other', 'speech', 'images', 'family', 'gender', 'publish'];
+        'name', 'date', 'position', 'biography', 'other', 'speech', 'images', 'family', 'gender', 'publish', 'qr_cod'];
 
     public function admin()
     {

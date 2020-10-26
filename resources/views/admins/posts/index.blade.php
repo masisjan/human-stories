@@ -23,9 +23,9 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Name id</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Date</th>
                                     <th scope="col">Admin</th>
                                     <th scope="col">Friend</th>
+                                    <th scope="col">Publish</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                                 </thead>
@@ -38,9 +38,9 @@
                                             <th scope="row"> {{ $index + 1 }} </th>
                                             <th scope="row"> {{ $index + $posts->firstItem() }} </th>
                                             <td> {{ $post->name }} </td>
-                                            <td> {{ $post->date }} </td>
                                             <td> {{ auth()->user()->name }} </td>
                                             <td> {{ $post->friend->name }} </td>
+                                            <td style=" @if ($post->publish == "not") color: red; @else color: green; @endif}}"> {{ $post->publish }} </td>
                                             <td width="150">
                                                 <a href="{{ route('posts.show' , [$post->id]) }}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
                                                 <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>

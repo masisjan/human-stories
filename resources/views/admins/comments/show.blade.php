@@ -52,7 +52,7 @@
                                     <div class="form-group row">
                                         <label for="publish" class="col-md-3 col-form-label">Publish</label>
                                         <div class="col-md-9">
-                                            <p class="form-control-plaintext text-muted">{{ $comment->publish }}</p>
+                                            <p class="form-control-plaintext" style="@if ($comment->publish == "not") color:red @else color:green @endif">{{ $comment->publish }}</p>
                                         </div>
                                     </div>
 
@@ -67,8 +67,8 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-md-9 offset-md-3">
                                             <a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-info">Edit</a>
-                                            <a href="{{ route('comments.destroy', [$comment->id]) }}" class="btn btn-outline-danger">Delete</a>
-                                            <a href="{{ route('comments.index') }}" class="btn btn-delete btn-outline-secondary" >Cancel</a>
+                                            <a href="{{ route('comments.destroy', [$comment->id]) }}" class="btn btn-delete btn-outline-danger">Delete</a>
+                                            <a href="{{ route('comments.index') }}" class="btn btn-outline-secondary" >Cancel</a>
                                         </div>
                                     </div>
                                 </div>

@@ -8,7 +8,7 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header card-title">
-                            <strong>Add New Contact</strong>
+                            <strong>Add New Post</strong>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">

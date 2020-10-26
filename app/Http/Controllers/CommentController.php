@@ -40,7 +40,7 @@ class CommentController extends Controller
         ]);
 
         Comment::create($request->all());
-        return back()->with('message', "Contact has been updated successfully");
+        return back();
 //        return redirect()->route('comments.index')
 //            ->with('message', "Contact has been updated successfully");
     }

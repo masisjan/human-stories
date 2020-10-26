@@ -24,6 +24,7 @@
                                     <th scope="col">Name id</th>
                                     <th scope="col">Post id</th>
                                     <th scope="col">Comment</th>
+                                    <th scope="col">Publish</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                                 </thead>
@@ -35,6 +36,7 @@
                                             <th scope="row"> {{ $index + $comments->firstItem() }} </th>
                                             <td> {{ $comment->post_id }} </td>
                                             <td> {{ $comment->comment }} </td>
+                                            <td style=" @if ($comment->publish == "not") color: red; @else color: green; @endif}}"> {{ $comment->publish }} </td>
                                             <td width="150">
                                                 <a href="{{ route('comments.show' , [$comment->id]) }}" class="btn btn-sm btn-circle btn-outline-info" title="Show"><i class="fa fa-eye"></i></a>
                                                 <a href="{{ route('comments.edit', $comment->id) }}" class="btn btn-sm btn-circle btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></a>

@@ -54,8 +54,8 @@ class PostController extends Controller
         $request->validate([
             'name' => 'required',
             'date' => 'required',
-//            'image' => 'required|mimes:jpeg,png,jpg',
-//            'company_id' => 'required|exists:companies,id'
+//            'image' => 'mimes:jpeg,png,jpg',
+//            'friend_id' => 'required|exists:friends,id'
         ]);
 
         $img_name = $request->friend_id;
@@ -65,9 +65,11 @@ class PostController extends Controller
 
         $image_new_name = "";
         if ($request->file('image')) {
+            Storage::disk('public')->delete('uploads/image/' . $img_name . '/' . $post->image);
             $image_new_name = date('Y-m-d-H-i-s') . '.' . $request->file('image')->getClientOriginalExtension();
             $image_path = $request->file('image')->storeAs('uploads/image/' . $img_name, $image_new_name, 'public');
         }
+
 
         if (!$request->file('image')) {
             $image_new_name = $post->image;
@@ -77,6 +79,12 @@ class PostController extends Controller
 
         $img_arr_string = "";
         if ($request->file('images')) {
+
+            $images_update = explode(',', $post->images);
+            foreach ($images_update as $image_update) {
+                Storage::disk('public')->delete('uploads/image/' . $img_name . '/' . $image_update);
+            }
+
             $img_arr = array();
             foreach ($request->File('images') as $img) {
                 $imgs_new_name = rand(111111, 999999) . '.' . $img->getClientOriginalExtension();
@@ -90,6 +98,7 @@ class PostController extends Controller
             $img_arr_string = $post->images;
         }
 
+//        dd($request);
         $form_data = array(
             'admin_id'               =>  $admin_id,
             'friend_id'              =>  $request->friend_id,
@@ -106,6 +115,7 @@ class PostController extends Controller
             'speech'                 =>  $request->speech,
             'images'                 =>  $img_arr_string,
             'family'                 =>  $request->family,
+            'qr_cod'                 =>  $request->qr_cod,
             'gender'                 =>  $request->gender,
             'publish'                =>  $request->publish,
         );
@@ -133,8 +143,8 @@ class PostController extends Controller
         $request->validate([
             'name' => 'required',
             'date' => 'required',
-//            'image' => 'required|mimes:jpeg,png,jpg',
-//            'company_id' => 'required|exists:companies,id'
+            'image' => 'required|mimes:jpeg,png,jpg',
+            'friend_id' => 'required|exists:friends,id'
         ]);
 
         $img_name = $request->friend_id;
@@ -182,8 +192,8 @@ class PostController extends Controller
             'family'                 =>  $request->family,
             'gender'                 =>  $request->gender,
             'publish'                =>  $request->publish,
+            'qr_cod'                 =>  $request->qr_cod,
         );
-
 
         Post::create($form_data);
 

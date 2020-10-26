@@ -9,7 +9,7 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header card-title">
-                            <strong>Update contact</strong>
+                            <strong>Update post</strong>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">

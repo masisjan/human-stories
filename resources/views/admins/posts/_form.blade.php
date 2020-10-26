@@ -80,8 +80,9 @@
             <label for="image" class="col-md-3 col-form-label">Գլխավոր նկար</label>
             <div class="col-md-9">
                 @if($post->image)
-                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:150px" alt=""><br>
-                    <input type="hidden" name="image" value="{{ $post->image }}" id="image" class=" @error('image') is-invalid @enderror">
+                    <img src="{{ asset('storage/uploads/image/' . $post->friend_id . '/' . $post->image) }}" style="width:150px" alt="">
+                    <p>Փոփոխել նկարը</p>
+                    <input type="file" name="image" value="{{ old('image', $post->image) }} }}" id="image" class=" @error('image') is-invalid @enderror">
                 @else
                     <input type="file" name="image" value="{{ old('image', $post->image) }}" id="image" class=" @error('image') is-invalid @enderror">
                     @error('image')
@@ -224,13 +225,13 @@
         </div>
 
         <div class="form-group row">
-            <label for="qr" class="col-md-3 col-form-label">QR ստատուս</label>
+            <label for="qr_cod" class="col-md-3 col-form-label">QR ստատուս</label>
             <div class="col-md-9">
-                <select name="qr" class="custom-select @error('qr') is-invalid @enderror">
+                <select name="qr_cod" class="custom-select @error('qr_cod') is-invalid @enderror">
                     <option value="not">not</option>
                     <option value="yes">yes</option>
                 </select>
-                @error('qr')
+                @error('qr_cod')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>

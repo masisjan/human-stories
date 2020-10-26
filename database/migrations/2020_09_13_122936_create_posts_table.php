@@ -32,7 +32,7 @@ class CreatePostsTable extends Migration
             $table->text('family')->nullable();
             $table->string('gender');
             $table->string('publish')->default('not');
-            $table->string('qr')->default('not');
+            $table->string('qr_cod')->default('not');
             $table->timestamps();
 
             $table->foreign('admin_id')->references('id')->on('users')->onDelete('set null');
