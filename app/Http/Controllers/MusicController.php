@@ -82,7 +82,20 @@ class MusicController extends Controller
         ]);
 
         $music = Music::findOrFail($id);
-        $music->update($request->all());
+        $music_new_name = $music->path;
+        if ($request->file('path')) {
+            Storage::disk('public')->delete('uploads/music/' . $music->singer_id . '/' . $music->path);
+            $music_new_name = date('Y-m-d-H-i-s') . '.' . $request->file('path')->getClientOriginalExtension();
+            $music_path = $request->file('path')->storeAs('uploads/music/' . $music->singer_id, $music_new_name, 'public');
+        }
+
+        $form = array(
+            'singer_id'             =>  $request->singer_id,
+            'name'                  =>  $request->name,
+            'path'                  =>  $music_new_name,
+        );
+
+        $music->update($form);
         return redirect()->route('music.index')->with('message', "Contact has been updated successfully");
     }
 
